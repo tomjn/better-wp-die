@@ -1,0 +1,16 @@
+{
+	"name"       : "tomjn/better-wp-die",
+	"description": "Improves the wp_die() interface to include a back button and friendly message, pretty outputs for arrays and objects, and stack traces if WP_DEBUG is enabled",
+	"type"       : "wordpress-plugin",
+	"license"    : "GPL-2.0+",
+	"authors"    : [
+		{
+			"name" : "Tom J Nowell",
+			"email": "contact@tomjn.com"
+		}
+	],
+	"require"    : {
+		"composer/installers": "~1.0",
+		"php"                : ">=5.3"
+	}
+}

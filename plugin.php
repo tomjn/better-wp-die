@@ -212,7 +212,15 @@ function tomjn_wp_die_handler( $message, $title = '', $args = array() ) {
 			</style>
 		</head>
 		<body id="error-page">
-		<img style="margin:1.5em 0 2em 10px; float:right;" src="http://placekitten.com/g/200/157" />
+		<?php
+
+		$image = apply_filters( 'better-wp-die-image', '' );
+		if ( !empty( $image ) ) {
+			?>
+			<img style="margin:1.5em 0 2em 10px; float:right;" src="<?php echo $image; ?>" />
+			<?php
+		}
+		?>
 		<h1 style="display:inline-block">Oh Dear</h1>
 		<p>Something wrong happened and you ended up here. For more details see the message below.</p>
 		<a href="javascript:history.back();" class="button">&laquo; Go Back</a>
